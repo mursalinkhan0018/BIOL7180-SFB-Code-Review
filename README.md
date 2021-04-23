@@ -58,13 +58,13 @@ disp('Running PANDA algorithm:');
 AgNet = PANDA(RegNet, GeneCoReg, TFCoop, alpha);
 ```
 
-The final result network **AgNet** is a complete bipartite network.
+7. The final result network **AgNet** is a complete bipartite network.
 
 ![AgNet](https://github.com/mursalinkhan0018/BIOL7180-SFB-Code-Review/blob/a31d5fac568dd63b58cf09ba8c75162aba52cbdc/AgNet-PANDA.PNG)
 
 **Figure 2. PANDA's OutPut "AgNet"**
 
-**PANDA Final Network Pairs**
+8. PANDA Final Network Pairs
 
 ![PANDA Final Network Pairs](https://github.com/mursalinkhan0018/BIOL7180-SFB-Code-Review/blob/7e444fdca57b0f13e313534a3c40d98b2908b19a/Panda-Final-Network-pairs.PNG)
 
@@ -117,7 +117,7 @@ N.B.: Make sure the paths are correct otherwise it will give ERROR.
 
 3. The final result network **PredNet** is a sample-specific network.
 
-#### My Run Results (test data)
+4. **My Run Results (test data)**
 
 The number of edges is 661 * 1000 (number of TFs * number of genes)
 
@@ -125,8 +125,8 @@ The number of edges is 661 * 1000 (number of TFs * number of genes)
 
 **Figure 6 LIONESS's sample-specific network PredNet**
 
+5. **Original Papers Networks **
 
-#### Original Papers Networks 
 The authors put all the networks in the [Grand Gene Regulatory Network Database](https://grand.networkmedicine.org/tissues/). The number of edges is 644 * 30243 (number of TFs * number of genes). 
 
 I downloaded one specific sample network to see the results. TF-by-gene matrix of Adipose - Subcutaneous tissue.
