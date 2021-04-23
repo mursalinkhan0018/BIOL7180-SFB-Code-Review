@@ -51,18 +51,25 @@ AgNet = PANDA(RegNet, GeneCoReg, TFCoop, alpha);
 
 The final result network **AgNet** is a complete bipartite network.
 
-
 ![AgNet](https://github.com/mursalinkhan0018/BIOL7180-SFB-Code-Review/blob/a31d5fac568dd63b58cf09ba8c75162aba52cbdc/AgNet-PANDA.PNG)
 
-**PANDA Final Network Pairs**
+Figure 1
 
+**PANDA Final Network Pairs**
 ![PANDA Final Network Pairs](https://github.com/mursalinkhan0018/BIOL7180-SFB-Code-Review/blob/7e444fdca57b0f13e313534a3c40d98b2908b19a/Panda-Final-Network-pairs.PNG)
+
+Figure 2
+
 #### Comments
+
 - Very well written and documented tools for the network construction.
+- Until now I generating similar results like the original paper.
 - There was one issue regarding the code run. The code was cut in the pdf. They need to take care of the issue.
 
 ![Improper-design markdown](https://github.com/mursalinkhan0018/BIOL7180-SFB-Code-Review/blob/9072423e0dc2afafc9bd19a64c51ea8dcbad9f0a/PANDA-code-cut.PNG)
   
+Figure 3
+
 ### Review of netZooM-LIONESS
 
 The `LIONESS` function generate single sample gene regulatory networks unlike `PANDA` used all the samples. It is also the part of the netZooM package.  
@@ -94,13 +101,34 @@ N.B.: Make sure the paths are correct otherwise it will give ERROR.
 
 ![LIONESS](https://github.com/mursalinkhan0018/BIOL7180-SFB-Code-Review/blob/2ff3e09d53e7d4916997bd0153028cb5c2f50255/LIONESS-Run.PNG)
 
+Figure 4
+
+
+
 3. The final result network **PredNet** is a sample-specific network.
+#### My Run Results (test data) 
+The number of edges is 661 * 1000 (number of TFs * number of genes)
 
 ![PredNet](https://github.com/mursalinkhan0018/BIOL7180-SFB-Code-Review/blob/96ab1c9693c761b55eb65611001b0526b07eaa65/PredNet-LIONESS.PNG)
 
+Figure 5
+
+
+#### Original Papers Networks 
+The authors put all the networks in the [Grand Gene Regulatory Network Database](https://grand.networkmedicine.org/tissues/). The number of edges is 644 * 30243 (number of TFs * number of genes). 
+
+I downloaded one specific sample network to see the results. TF-by-gene matrix of (Adipose - Subcutaneous tissue.
+
+[tissue](https://github.com/mursalinkhan0018/BIOL7180-SFB-Code-Review/blob/3788053d6e769dcd2daf1a7953cf4ee68d260b15/Original%20Paper%20Nerworks.PNG)
+
+Figure 6
+
+I am not sure how to add the TF and gene names in the matrix.
+
 #### Comments
 - Similar to the PANDA it is also very useful and well documented function for the single sample network construction.
-- One needs to know the `SET Path` to make sure it is getting the PANDA output. 
+- One needs to know the `SET Path` to make sure it is getting the PANDA output.
+- I am not sure where to find the info to add TF and gene names in the matrix.
 
 ### Concluding Remarks
 
