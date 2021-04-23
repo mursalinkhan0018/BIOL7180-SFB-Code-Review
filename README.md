@@ -82,8 +82,6 @@ lioness_run(exp_file, motif_file, ppi_file, panda_file, save_dir, START, END, al
 ```
 N.B.: Make sure the paths are correct otherwise it will give ERROR.
 
-3. For visualization they recommend to use 
-
 #### Comments
 - Similar to the PANDA it is also very useful and well documented function for the single sample network construction.
 - One needs to know the `SET Path` to make sure it is getting the PANDA output. 
@@ -92,12 +90,9 @@ N.B.: Make sure the paths are correct otherwise it will give ERROR.
 
 The ![netZooM](https://github.com/netZoo/netZooM) is well documented and reproducible tools for the network analysis of the expression network, the motif network, and the ppi network. I think one needs to read the following reference papers to understand the function completely.
 
-
 References
 
 1. Glass, Kimberly, et al. "Passing messages between biological networks to refine predicted interactions." PloS one 8.5 (2013): e64832.
 2. Kuijjer, Marieke Lydia, et al. "Estimating sample-specific regulatory networks." iScience 14 (2019): 226-240.
-
-
 
 
