@@ -54,9 +54,9 @@ The final result network **AgNet** is a complete bipartite network.
 
 ![AgNet](https://github.com/mursalinkhan0018/BIOL7180-SFB-Code-Review/blob/a31d5fac568dd63b58cf09ba8c75162aba52cbdc/AgNet-PANDA.PNG)
 
-PANDA Final Network Pairs 
+**PANDA Final Network Pairs**
 
-![PANDA Final Network Pairs]()
+![PANDA Final Network Pairs](https://github.com/mursalinkhan0018/BIOL7180-SFB-Code-Review/blob/7e444fdca57b0f13e313534a3c40d98b2908b19a/Panda-Final-Network-pairs.PNG)
 #### Comments
 - Very well written and documented tools for the network construction.
 - There was one issue regarding the code run. The code was cut in the pdf. They need to take care of the issue.
