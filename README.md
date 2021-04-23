@@ -22,7 +22,7 @@ Then add netZooM to your MATLAB path
 addpath(genpath('path/to/netZooM'))
 ```
 
-2. I used the test data set of the PANDA to run ![codes](https://github.com/netZoo/netZooM/tree/master/tutorials/panda) because the data of the original paper ![Lopes-Ramos et al., 2020](https://www.sciencedirect.com/science/article/pii/S2211124720307762) needs extensive filtering as they mentioned in the paper. The code is very well explained if anyone has little knowledge in the MATLAB. The input files looks like
+2. I used the test data set of the PANDA to run ![codes](https://github.com/netZoo/netZooM/tree/master/tutorials/panda) because the data of the original paper ![Lopes-Ramos et al., 2020](https://www.sciencedirect.com/science/article/pii/S2211124720307762) needs extensive filtering as they mentioned in the paper. But, they provide enough external links to reproduce the analysis. In the external links, the code is very well explained if anyone has little knowledge in the MATLAB. The input files looks like
 
 ```
 % Set Program Parameters
