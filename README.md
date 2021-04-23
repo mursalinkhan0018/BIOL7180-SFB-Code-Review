@@ -82,6 +82,8 @@ lioness_run(exp_file, motif_file, ppi_file, panda_file, save_dir, START, END, al
 ```
 N.B.: Make sure the paths are correct otherwise it will give ERROR.
 
+![LIONESS](https://github.com/mursalinkhan0018/BIOL7180-SFB-Code-Review/blob/2ff3e09d53e7d4916997bd0153028cb5c2f50255/LIONESS-Run.PNG)
+
 #### Comments
 - Similar to the PANDA it is also very useful and well documented function for the single sample network construction.
 - One needs to know the `SET Path` to make sure it is getting the PANDA output. 
