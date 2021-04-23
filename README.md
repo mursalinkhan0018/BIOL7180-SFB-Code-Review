@@ -5,7 +5,7 @@ In the code review for the scripting for biologist I am performing to review cod
 
 In the paper they used MATLAB based [netZooM](https://github.com/netZoo/netZooM) to create the gene networks to understand sex-dimorphic gene expression in 29 human samples ([Lopes-Ramos et al., 2020](https://www.sciencedirect.com/science/article/pii/S2211124720307762)). More precisely they used the `PANDA` (Passing Attributes between Networks for Data Assimilation), which is a message-passing model using multiple sources of information to predict regulatory relationships, and used it to integrate protein-protein interaction, gene expression, and sequence motif data to reconstruct genome-wide, condition-specific regulatory networks ([Glass et al., 2013](https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0064832)). 
 
-Although the PANDA is infering connections between genes (or their products) in large numbers of expression samples, aggregate models fail to capture population heterogeneity. Thus they used `LIONESS` (Linear Interpolation to Obtain Network Estimates for Single Samples), a method to reverse engineer sample-specific networks from aggregate networks (PANDA Output). The `LIONESS` is capable to study changes in network topology across time and to characterize shifts in gene regulation that were not apparent in the expression data ([Lopes-Ramos et al., 2020](https://www.sciencedirect.com/science/article/pii/S2211124720307762)).
+Although the PANDA is infering connections between genes (or their products) in large numbers of expression samples, aggregate models fail to capture population heterogeneity. Thus they used `LIONESS` (Linear Interpolation to Obtain Network Estimates for Single Samples), a method to reverse engineer sample-specific networks from aggregate networks (PANDA Output-*AgNet*). The `LIONESS` is capable to study changes in network topology across time and to characterize shifts in gene regulation that were not apparent in the expression data ([Lopes-Ramos et al., 2020](https://www.sciencedirect.com/science/article/pii/S2211124720307762)).
 
 The paper itself does not explain the code and analysis in detail but the supplement information [Method S1](https://www.cell.com/cms/10.1016/j.celrep.2020.107795/attachment/46ce2d26-cd81-4ad8-966b-7fcf26e3bd17/mmc1) gave sufficient information to undersatnd the PANDA and LIONESS. The Methods section of the paper has **KEY RESOURCES TABLE**, where I found the link of the **netZooM** which eventually lead me to the `PANDA` github page where I found the [codes](https://github.com/netZoo/netZooM/tree/master/tutorials/panda) for reconstruction of the gene regulatory network in PANDA. In addition, I reviewed the lioness [codes](https://github.com/netZoo/netZooM/blob/master/tutorials/lioness/lioness.pdf) to generate single sample gene regulatory network. 
 
@@ -42,6 +42,8 @@ GeneCoReg = Coexpression(Exp);
 ```
 ![Build coexpression network](https://github.com/mursalinkhan0018/BIOL7180-SFB-Code-Review/blob/9072423e0dc2afafc9bd19a64c51ea8dcbad9f0a/PANDA-code-Expression-data.PNG)
 
+**Figure 1. PANDA's Build coexpression network**
+
 5. Based on the Motif information it also calulate the `Build TF binding motif network`. In addition, PANDA can also create protein-protein interaction network in the `Build TF-TF PPI network`. 
 6. Finally, after network normalization, it is time for calling `PANDA function` to perform the iterative optimisation procedure.
 ```
@@ -53,23 +55,23 @@ The final result network **AgNet** is a complete bipartite network.
 
 ![AgNet](https://github.com/mursalinkhan0018/BIOL7180-SFB-Code-Review/blob/a31d5fac568dd63b58cf09ba8c75162aba52cbdc/AgNet-PANDA.PNG)
 
-**Figure 1. PANDA's OutPut "AgNet"
+**Figure 2. PANDA's OutPut "AgNet"**
 
 **PANDA Final Network Pairs**
 
 ![PANDA Final Network Pairs](https://github.com/mursalinkhan0018/BIOL7180-SFB-Code-Review/blob/7e444fdca57b0f13e313534a3c40d98b2908b19a/Panda-Final-Network-pairs.PNG)
 
-**Figure 2. PANDA's OutPut Final Network Pairs
+**Figure 3. PANDA's OutPut Final Network Pairs**
 
 #### Comments
 
 - Very well written and documented tools for the network construction.
-- Until now I generating similar results like the original paper.
+- Until now I can generate similar results like the original paper using test data (TFs=661 and Genes=1000).
 - There was one issue regarding the code run. The code was cut in the pdf. They need to take care of the issue.
 
 ![Improper-design markdown](https://github.com/mursalinkhan0018/BIOL7180-SFB-Code-Review/blob/9072423e0dc2afafc9bd19a64c51ea8dcbad9f0a/PANDA-code-cut.PNG)
   
-**Figure 3 PANDA's Improper-Design markdown
+**Figure 4 PANDA's Improper-Design markdown**
 
 ### Review of netZooM-LIONESS
 
@@ -102,18 +104,17 @@ N.B.: Make sure the paths are correct otherwise it will give ERROR.
 
 ![LIONESS](https://github.com/mursalinkhan0018/BIOL7180-SFB-Code-Review/blob/2ff3e09d53e7d4916997bd0153028cb5c2f50255/LIONESS-Run.PNG)
 
-**Figure 4 LIONESS's Run 
-
-
+**Figure 5 LIONESS's Run** 
 
 3. The final result network **PredNet** is a sample-specific network.
+
 #### My Run Results (test data)
 
 The number of edges is 661 * 1000 (number of TFs * number of genes)
 
 ![PredNet](https://github.com/mursalinkhan0018/BIOL7180-SFB-Code-Review/blob/96ab1c9693c761b55eb65611001b0526b07eaa65/PredNet-LIONESS.PNG)
 
-**Figure 5 LIONESS's sample-specific network PredNet
+**Figure 6 LIONESS's sample-specific network PredNet**
 
 
 #### Original Papers Networks 
@@ -123,9 +124,9 @@ I downloaded one specific sample network to see the results. TF-by-gene matrix o
 
 ![tissue](https://github.com/mursalinkhan0018/BIOL7180-SFB-Code-Review/blob/3788053d6e769dcd2daf1a7953cf4ee68d260b15/Original%20Paper%20Nerworks.PNG)
 
-**Figure 6 Original Papers Networks (Adipose - Subcutaneous tissue): LIONESS's sample-specific network (PredNet)
+**Figure 7 Original Papers Networks (Adipose - Subcutaneous tissue): LIONESS's sample-specific network (PredNet)**
 
-**N.B. I am not sure how to add the TF and gene names in the matrix.
+**N.B. I am not sure how to add the TF and gene names in the matrix.**
 
 #### Comments
 
