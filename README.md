@@ -53,12 +53,13 @@ The final result network **AgNet** is a complete bipartite network.
 
 ![AgNet](https://github.com/mursalinkhan0018/BIOL7180-SFB-Code-Review/blob/a31d5fac568dd63b58cf09ba8c75162aba52cbdc/AgNet-PANDA.PNG)
 
-Figure 1
+**Figure 1. PANDA's OutPut "AgNet"
 
 **PANDA Final Network Pairs**
+
 ![PANDA Final Network Pairs](https://github.com/mursalinkhan0018/BIOL7180-SFB-Code-Review/blob/7e444fdca57b0f13e313534a3c40d98b2908b19a/Panda-Final-Network-pairs.PNG)
 
-Figure 2
+**Figure 2. PANDA's OutPut Final Network Pairs
 
 #### Comments
 
@@ -68,7 +69,7 @@ Figure 2
 
 ![Improper-design markdown](https://github.com/mursalinkhan0018/BIOL7180-SFB-Code-Review/blob/9072423e0dc2afafc9bd19a64c51ea8dcbad9f0a/PANDA-code-cut.PNG)
   
-Figure 3
+**Figure 3 PANDA's Improper-Design markdown
 
 ### Review of netZooM-LIONESS
 
@@ -101,38 +102,40 @@ N.B.: Make sure the paths are correct otherwise it will give ERROR.
 
 ![LIONESS](https://github.com/mursalinkhan0018/BIOL7180-SFB-Code-Review/blob/2ff3e09d53e7d4916997bd0153028cb5c2f50255/LIONESS-Run.PNG)
 
-Figure 4
+**Figure 4 LIONESS's Run 
 
 
 
 3. The final result network **PredNet** is a sample-specific network.
-#### My Run Results (test data) 
+#### My Run Results (test data)
+
 The number of edges is 661 * 1000 (number of TFs * number of genes)
 
 ![PredNet](https://github.com/mursalinkhan0018/BIOL7180-SFB-Code-Review/blob/96ab1c9693c761b55eb65611001b0526b07eaa65/PredNet-LIONESS.PNG)
 
-Figure 5
+**Figure 5 LIONESS's sample-specific network PredNet
 
 
 #### Original Papers Networks 
 The authors put all the networks in the [Grand Gene Regulatory Network Database](https://grand.networkmedicine.org/tissues/). The number of edges is 644 * 30243 (number of TFs * number of genes). 
 
-I downloaded one specific sample network to see the results. TF-by-gene matrix of (Adipose - Subcutaneous tissue.
+I downloaded one specific sample network to see the results. TF-by-gene matrix of Adipose - Subcutaneous tissue.
 
-[tissue](https://github.com/mursalinkhan0018/BIOL7180-SFB-Code-Review/blob/3788053d6e769dcd2daf1a7953cf4ee68d260b15/Original%20Paper%20Nerworks.PNG)
+![tissue](https://github.com/mursalinkhan0018/BIOL7180-SFB-Code-Review/blob/3788053d6e769dcd2daf1a7953cf4ee68d260b15/Original%20Paper%20Nerworks.PNG)
 
-Figure 6
+**Figure 6 Original Papers Networks (Adipose - Subcutaneous tissue): LIONESS's sample-specific network (PredNet)
 
-I am not sure how to add the TF and gene names in the matrix.
+**N.B. I am not sure how to add the TF and gene names in the matrix.
 
 #### Comments
+
 - Similar to the PANDA it is also very useful and well documented function for the single sample network construction.
 - One needs to know the `SET Path` to make sure it is getting the PANDA output.
 - I am not sure where to find the info to add TF and gene names in the matrix.
 
 ### Concluding Remarks
 
-The [netZooM](https://github.com/netZoo/netZooM) is well documented and reproducible tools for the network analysis of the expression network, the motif network, and the ppi network. I think one needs to read the following reference papers to understand the function completely.
+Overall, the methods, supplement methods, supplement, the linked website and github together can give you the complete codes and understanding how to reproduce or replicate the results. However, the original paper and methods are not fully well explained. I think in the analysis paper it should be very common to give external and github links. In case of the [netZooM](https://github.com/netZoo/netZooM), it is well documented tools for the expression network, the motif network, and the ppi network. I think one needs to read the following reference papers to understand the functions completely [1-2].
 
 References
 
