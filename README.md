@@ -92,6 +92,10 @@ N.B.: Make sure the paths are correct otherwise it will give ERROR.
 
 ![LIONESS](https://github.com/mursalinkhan0018/BIOL7180-SFB-Code-Review/blob/2ff3e09d53e7d4916997bd0153028cb5c2f50255/LIONESS-Run.PNG)
 
+3. The final result network PredNet is a sample-specific network.
+
+![PredNet](https://github.com/mursalinkhan0018/BIOL7180-SFB-Code-Review/blob/96ab1c9693c761b55eb65611001b0526b07eaa65/PredNet-LIONESS.PNG)
+
 #### Comments
 - Similar to the PANDA it is also very useful and well documented function for the single sample network construction.
 - One needs to know the `SET Path` to make sure it is getting the PANDA output. 
