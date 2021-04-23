@@ -16,6 +16,7 @@ Although the PANDA is infering connections between genes (or their products) in 
 The paper itself does not explain the code and analysis in detail but the supplement information [Method S1](https://www.cell.com/cms/10.1016/j.celrep.2020.107795/attachment/46ce2d26-cd81-4ad8-966b-7fcf26e3bd17/mmc1) gave sufficient information to undersatnd the PANDA and LIONESS. The Methods section of the paper has **KEY RESOURCES TABLE**, where I found the link of the **netZooM** which eventually lead me to the `PANDA` github page where I found the [codes](https://github.com/netZoo/netZooM/tree/master/tutorials/panda) for reconstruction of the gene regulatory network in PANDA. In addition, I reviewed the lioness [codes](https://github.com/netZoo/netZooM/blob/master/tutorials/lioness/lioness.pdf) to generate single sample gene regulatory network. 
 
 ### Review of netZooM-PANDA
+For Codes Click [HERE](https://github.com/mursalinkhan0018/BIOL7180-SFB-Code-Review/blob/63335cf4de41b63b78f72a2a3c91164c6888c8af/panda.mlx)
 
 1. The netZooM is a MATLAB based software package to create networks from gene expression data. I successfully clone the package in my `Local Drive` by 
 
@@ -80,6 +81,8 @@ The final result network **AgNet** is a complete bipartite network.
 **Figure 4 PANDA's Improper-Design markdown**
 
 ### Review of netZooM-LIONESS
+For Codes Click [HERE](https://github.com/mursalinkhan0018/BIOL7180-SFB-Code-Review/blob/63335cf4de41b63b78f72a2a3c91164c6888c8af/lioness.mlx)
+
 
 The `LIONESS` function generate single sample gene regulatory networks unlike `PANDA` used all the samples. It is also the part of the netZooM package.  
 
