@@ -125,7 +125,7 @@ The number of edges is 661 * 1000 (number of TFs * number of genes)
 
 **Figure 6 LIONESS's sample-specific network PredNet**
 
-5. **Original Papers Networks **
+5. **Original Papers Networks**
 
 The authors put all the networks in the [Grand Gene Regulatory Network Database](https://grand.networkmedicine.org/tissues/). The number of edges is 644 * 30243 (number of TFs * number of genes). 
 
