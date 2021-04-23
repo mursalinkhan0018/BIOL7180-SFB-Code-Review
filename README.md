@@ -49,7 +49,7 @@ disp('Running PANDA algorithm:');
 AgNet = PANDA(RegNet, GeneCoReg, TFCoop, alpha);
 ```
 
-The final result network AgNet is a complete bipartite network.
+The final result network **AgNet** is a complete bipartite network.
 
 
 ![AgNet](https://github.com/mursalinkhan0018/BIOL7180-SFB-Code-Review/blob/a31d5fac568dd63b58cf09ba8c75162aba52cbdc/AgNet-PANDA.PNG)
@@ -67,7 +67,7 @@ The `LIONESS` function generate single sample gene regulatory networks unlike `P
 
 #### Using LIONESS to infer single sample gene regulatory networks
 
-1. `LIONESS` use the outout data from PANDA. But, it can use any other similarly formated data as well. Like `PANDA`, **LIONESS** uses the expression network, the motif network, and the ppi network. N.B. In the ![lioness code](https://github.com/netZoo/netZooM/blob/master/tutorials/lioness/lioness.pdf) they used the output of the `PANDA`
+1. `LIONESS` use the outout data from PANDA (*AgNet(input for LIONESS)*). But, it can use any other similarly formated data as well. Like `PANDA`, **LIONESS** uses the expression network, the motif network, and the ppi network. N.B. In the ![lioness code](https://github.com/netZoo/netZooM/blob/master/tutorials/lioness/lioness.pdf) they used the output of the `PANDA`
 
 ```
 panda_file = 'panda2.test.mat'; % This test network has been transposed
@@ -92,7 +92,7 @@ N.B.: Make sure the paths are correct otherwise it will give ERROR.
 
 ![LIONESS](https://github.com/mursalinkhan0018/BIOL7180-SFB-Code-Review/blob/2ff3e09d53e7d4916997bd0153028cb5c2f50255/LIONESS-Run.PNG)
 
-3. The final result network PredNet is a sample-specific network.
+3. The final result network **PredNet** is a sample-specific network.
 
 ![PredNet](https://github.com/mursalinkhan0018/BIOL7180-SFB-Code-Review/blob/96ab1c9693c761b55eb65611001b0526b07eaa65/PredNet-LIONESS.PNG)
 
